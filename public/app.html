@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="bumblebee">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./app.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="to do.png">
+
+    <title>To-do list</title>
+</head>
+
+<body>
+
+    <!-- menu de contenido -->
+    <div class="container">
+        <!-- boton deingreso de datos -->
+        <header>
+            <h1>Lista de Tareas</h1>
+
+            <div class="input-section">
+                <input id="todo-input" type="text" placeholder="📑 Agregar Tarea Aqui.."
+                    class="input w-full max-w-xs" />
+                <button id="add-button" class="btn btn-add ">
+                    <i class="bx bx-plus bx-sm"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- boton borrar -->
+
+        <div class="todos-filter">
+
+            <button id="delete-selected" class="btn btn-ghost delete-selected-btn">
+                Eliminar Seleccion
+            </button>
+            <button id="delete-all" class="btn btn-ghost delete-all-btn">
+                Eliminar todo
+            </button>
+        </div>
+
+
+        <!-- clase id de tareas -->
+        <ul id="all-todos" class="todos-list">
+
+        </ul>
+
+
+        <!-- desplegar filtros de tareas -->
+        <div class="filters">
+            <div class="dropdown">
+                <button class="dropbtn">Filtro</button>
+                <div class="dropdown-content">
+                    <a href="#" id="all">Por Hacer</a>
+                    <a href="#" id="rem">Pendiente</a>
+                    <a href="#" id="com">Completada</a>
+                </div>
+            </div>
+
+            <!-- mostrar tareas completadas -->
+            <div class="completed-task">
+                <p>Completado: <span id="c-count">0</span></p>
+            </div>
+            <div class="remaining-task">
+                <p>Total Tareas: <span id="r-count">0</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ruta de app.js -->
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
