@@ -8,7 +8,7 @@ const port = 3000;
 app.use(express.static(path.join(__dirname, 'public')))
 
 // ruta raiz de la app.html
-
+// la req es la peticion y la res es la respuesta
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'app.html'));
 });

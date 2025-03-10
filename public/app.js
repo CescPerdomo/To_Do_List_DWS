@@ -1,3 +1,5 @@
+//variables globales para tareas
+
 var todoList = []
 var comdoList = [];
 var remList = [];
